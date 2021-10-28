@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  Nhập số: <input type="text" id="num">
+    <input type="button" value="check" onclick="display()">
+    <div id="total1"></div>
+
+
+<script>
+
+    let num = [1, 2, -4, -6, 5, -8, 9, -10, 11, 14];
+    let variable = [];
+
+    function display() {
+        variable = document.getElementById("num").value;
+        num.push(variable);
+
+        let flag = true;
+        for (let i = 0; i < num.length; i++) {
+            if (variable > 0 && variable % 1 === 0 || variable < 0 && variable % 1 === 0){
+                flag = false;
+                document.getElementById('total1').innerText = 'V is in the array'
+            }
+            if (flag === true ){
+                document.getElementById('total1').innerText = 'V is not in the array'
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

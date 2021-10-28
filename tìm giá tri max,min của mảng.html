@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [12, 4, 5, 16, 34, 23, 3, 9, 14, 2];
+    let maxValue = number[0];
+    let maxIndex = 0;
+    let minValue = number[0];
+    let minIndex = 0;
+    for (let i = 0; i < number.length; i++) {
+        if (number[i] > maxValue) {
+            maxValue = number[i];
+            maxIndex = [i];
+        }
+        if (number[i] < minValue) {
+            minValue = number[i];
+            minIndex = [i];
+        }
+    }
+    document.write('giá trị lớn nhất là:' + maxValue + " <br>")
+    document.write('vị trí của giá trị lớn nhất là:' + maxIndex + "<br>");
+    document.write('giá trị nhỏ nhất là:' + minValue + " <br>")
+    document.write('vị trí của giá trị nhỏ nhất là:' + minIndex);
+</script>
+</body>
+</html>

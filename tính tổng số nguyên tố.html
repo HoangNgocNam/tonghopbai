@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(N){
+        if (N<2){
+            return false;
+        }
+        for (let i = 2; i < N ; i++) {
+            if (N%i ===0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let total = 0;
+    for (let i = 0; i < 500; i++) {
+        if (check(i)) {
+            total += i;
+        }
+    }
+    document.write('Tổng các số nguyên tố nhỏ hơn 500:' + ' ' + total);
+</script>
+</body>
+</html>
